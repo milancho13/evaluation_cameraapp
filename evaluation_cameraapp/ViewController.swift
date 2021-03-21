@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +17,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var photoImage: UIImageView!
     
     @IBAction func cameraLaunchAction(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            print("Camera can be used")
+        } else {
+            print("No")
+        }
     }
     
     @IBAction func shareAction(_ sender: Any) {
