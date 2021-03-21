@@ -14,6 +14,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBOutlet weak var photoImage: UIImageView!
+    
+    @IBAction func cameraLaunchAction(_ sender: Any) {
+    }
+    
+    @IBAction func shareAction(_ sender: Any) {
+    }
+    
 }
 
